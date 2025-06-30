@@ -20,48 +20,134 @@ let osm = new Tile({
     source: new OSM()
 });
 
-// Colombia Administrative Boundaries
-let colombiaBoundary = new Image({
-    title: "Colombia Administrative level 0",
+// NO2 AAD
+let no2aad = new Image({
+    title: "NO2 Avg. Dif. 2022 from Prev. 5 Years",
     source: new ImageWMS({
         url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
-        params: { 'LAYERS': 'gis:COL_adm0' }
+        params: { 'LAYERS': 'gisgeoserver_22:Poland_NO2_2017-2021_AAD_map_2022' }
     }),
     visible: false
 });
 
-// Colombia Administrative level 1
-var colombiaDepartments = new Image({
-    title: "Colombia Administrative level 1",
+// PM2.5 AAD
+let pm2p5aad = new Image({
+    title: "PM2.5 Avg. Dif. 2022 from Prev. 5 Years",
     source: new ImageWMS({
         url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
-        params: { 'LAYERS': 'gis:COL_adm1' }
-    }),
-    opacity: 0.5,
-    visible: false
-});
-
-// Colombia Roads
-var colombiaRoads = new Image({
-    title: "Colombia Roads",
-    source: new ImageWMS({
-        url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
-        params: { 'LAYERS': 'gis:COL_roads' }
+        params: { 'LAYERS': 'gisgeoserver_22:Poland_pm2p5_2017-2021_AAD_map_2022' }
     }),
     visible: false
 });
 
-// Colombia Rivers
-var colombiaRivers = new Image({
-    title: "Colombia Rivers",
-    type: "overlay",
+// PM10 AAD
+let pm10aad = new Image({
+    title: "PM10 Avg. Dif. 2022 from Prev. 5 Years",
     source: new ImageWMS({
         url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
-        params: { 'LAYERS': 'gis:COL_rivers' }
+        params: { 'LAYERS': 'gisgeoserver_22:Poland_pm10_2017-2021_AAD_map_2022' }
     }),
-    visible: false,
-    minResolution: 1000,
-    maxResolution: 5000
+    visible: false
+});
+
+// land cover
+let landcover = new Image({
+    title: "Land Cover",
+    source: new ImageWMS({
+        url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
+        params: { 'LAYERS': 'gisgeoserver_22:Poland_LC_reclassified' }
+    }),
+    visible: false
+});
+
+// NO2 2022
+let no2_2022 = new Image({
+    title: "NO2 Avg. 2022",
+    source: new ImageWMS({
+        url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
+        params: { 'LAYERS': 'gisgeoserver_22:Poland_average_no2_2022' }
+    }),
+    visible: false
+});
+
+// PM2.5 2022
+let pm2p5_2022 = new Image({
+    title: "PM2.5 Avg. 2022",
+    source: new ImageWMS({
+        url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
+        params: { 'LAYERS': 'gisgeoserver_22:Poland_average_pm2p5_2022' }
+    }),
+    visible: false
+});
+
+// PM10 2022
+let pm10_2022 = new Image({
+    title: "PM10 Avg. 2022",
+    source: new ImageWMS({
+        url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
+        params: { 'LAYERS': 'gisgeoserver_22:Poland_average_pm10_2022' }
+    }),
+    visible: false
+});
+
+// NO2 concentration 2020
+let no2concentration = new Image({
+    title: "NO2 Concentration 2020",
+    source: new ImageWMS({
+        url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
+        params: { 'LAYERS': 'gisgeoserver_22:Poland_no2_concentration_map_2020' }
+    }),
+    visible: false
+});
+
+// PM2.5 concentration 2020
+let pm2p5concentration = new Image({
+    title: "PM2.5 Concentration 2020",
+    source: new ImageWMS({
+        url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
+        params: { 'LAYERS': 'gisgeoserver_22:Poland_pm2p5_concentration_map_2020' }
+    }),
+    visible: false
+});
+
+// PM10 concentration 2020
+let pm10concentration = new Image({
+    title: "PM10 Concentration 2020",
+    source: new ImageWMS({
+        url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
+        params: { 'LAYERS': 'gisgeoserver_22:Poland_pm10_concentration_map_2020' }
+    }),
+    visible: false
+});
+
+// NO2 bivariate 2020
+let no2bivariate = new Image({
+    title: "NO2 Bivariate 2020",
+    source: new ImageWMS({
+        url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
+        params: { 'LAYERS': 'gisgeoserver_22:Poland_no2_2020_bivariate' }
+    }),
+    visible: false
+});
+
+// PM2.5 bivariate 2020
+let pm2p5bivariate = new Image({
+    title: "PM2.5 Bivariate 2020",
+    source: new ImageWMS({
+        url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
+        params: { 'LAYERS': 'gisgeoserver_22:Poland_pm2p5_2020_bivariate' }
+    }),
+    visible: false
+});
+
+// PM10 bivariate 2020
+let pm10bivariate = new Image({
+    title: "PM10 Bivariate 2020",
+    source: new ImageWMS({
+        url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
+        params: { 'LAYERS': 'gisgeoserver_22:Poland_pm10_2020_bivariate' }
+    }),
+    visible: false
 });
 
 // Add the layer groups code here:
@@ -70,19 +156,28 @@ let basemapLayers = new Group({
     layers: [osm]
 });
 let overlayLayers = new Group({
-    title: 'Overlay Layers',
+    title: 'Computed Layers',
     layers: [
-        colombiaBoundary,
-        colombiaDepartments,
-        colombiaRivers,
-        colombiaRoads
+        no2aad,
+        pm2p5aad,
+        pm10aad,
+        landcover,
+        no2_2022,
+        pm2p5_2022,
+        pm10_2022,
+        no2concentration,
+        pm2p5concentration,
+        pm10concentration,
+        no2bivariate,
+        pm2p5bivariate,
+        pm10bivariate
     ]
 });
 
 
 // Map Initialization
-let mapOrigin = fromLonLat([-74, 4.6]);
-let zoomLevel = 5;
+let mapOrigin = fromLonLat([19.1451, 51.9194]);
+let zoomLevel = 6;
 let map = new Map({
     target: document.getElementById('map'),
     //layers: [basemapLayers, overlayLayers],
@@ -109,25 +204,6 @@ map.addControl(
 // Add the LayerSwitcher control here:
 var layerSwitcher = new LayerSwitcher({});
 map.addControl(layerSwitcher);
-
-// Add the Stadia Basemaps here:
-var stamenWatercolor = new Tile({
-    title: 'Stamen Watercolor',
-    type: 'base',
-    visible: false,
-    source: new StadiaMaps({
-        layer: 'stamen_watercolor'
-    })
-});
-var stamenToner = new Tile({
-    title: 'Stamen Toner',
-    type: 'base',
-    visible: false,
-    source: new StadiaMaps({
-        layer: 'stamen_toner'
-    })
-});
-basemapLayers.getLayers().extend([stamenWatercolor, stamenToner]);
 
 // Add the ESRI XYZ basemaps here:
 var esriTopoBasemap = new Tile({
@@ -160,65 +236,7 @@ basemapLayers.getLayers().extend([
     esriTopoBasemap, esriWorldImagery
 ]);
 
-// Add the WFS layer here:
-// First, the URL definition:
-var wfsUrl = "https://www.gis-geoserver.polimi.it/geoserver/gis/wfs?" + 
-"service=WFS&" + 
-"version=2.0.0&" +
-"request=GetFeature&" + 
-"typeName=gis:COL_water_areas&" + 
-"srsname=EPSG:3857&" + 
-"outputFormat=application/json";
-// Then the Source and Layer definitions:
-let wfsSource = new VectorSource({});
-let wfsLayer = new Vector({
-    title: "Colombia Water Areas",
-    source: wfsSource,
-    visible: true,
-    style: new Style({
-        fill: new Fill({
-            color: "#bde0fe"
-        }),
-        stroke: new Stroke({
-            width: 2,
-            color: "#a2d2ff"
-        })
-    })
-});
 
-// Finally the call to the WFS service:
-fetch(wfsUrl)
-.then((response) => {
-    if (!response.ok) {
-        throw new Error('Error ' + response.statusText);
-    }
-    response.json().then(data => {
-        wfsSource.addFeatures(
-	    new GeoJSON().readFeatures(data)
-	);
-    })
-});
-overlayLayers.getLayers().extend([wfsLayer]);
-
-// Add the local static GeoJSON layer here:
-let staticGeoJSONSource = new VectorSource({
-    url: '../geojson/COL_adm2.geojson', 
-    format: new GeoJSON()
-});
-let staticGeoJSONLayer = new Vector({
-    title: "Colombia Municipalities",
-    source: staticGeoJSONSource,
-    style: new Style({
-        fill: new Fill({
-            color: "rgba(255, 127, 80, 0.5)"
-        }),
-        stroke: new Stroke({
-            width: 2,
-            color: "#ff7f50"
-        })
-    })
-});
-overlayLayers.getLayers().push(staticGeoJSONLayer);
 
 // Add the popup code here:
 var container = document.getElementById('popup');
@@ -269,7 +287,6 @@ map.on('pointermove', function(event) {
     map.getTarget().style.cursor = hit ? 'pointer' : '';
 });
 
-// Add the legend code here:
 var legendHTMLString = '<ul>';
 function getLegendElement(title, color){
     return '<li>' + 
@@ -279,40 +296,73 @@ function getLegendElement(title, color){
         '</span></li>';
 }
 
-for(let overlayLayer of overlayLayers.getLayers().getArray()){
-    if(overlayLayer.getSource() instanceof ImageWMS){
-        var legendURLParams = {format: "application/json"};
-        var legendUrl = overlayLayer.getSource().getLegendUrl(0, legendURLParams);
-        // make the legend JSON request
-        await fetch(legendUrl).then(async (response) => {
-            await response.json().then((data) => {
-                var layerTitle = overlayLayer.get('title');
-                var layerSymbolizer = data["Legend"][0]["rules"][0]["symbolizers"][0];
-                var layerColor = null;
-                if("Polygon" in layerSymbolizer){
-                    layerColor = layerSymbolizer["Polygon"]["fill"];
-                } else if("Line" in layerSymbolizer){
-                    layerColor = layerSymbolizer["Line"]["stroke"];
-                }
-
-                if(layerColor != null){
-                    legendHTMLString += getLegendElement(layerTitle, layerColor);
-                }
-            });
-        });
-
-    } else {
-        var layerStyle = overlayLayer.getStyle();
-        var layerColor = layerStyle.getFill().getColor();
-        var layerTitle = overlayLayer.get('title');
-        legendHTMLString += getLegendElement(layerTitle, layerColor);
-    }
+function getLegendImageElement(title, url){
+    return '<li>' + 
+        '<span class="legend-image"><img src="' + url + '" alt="legend for ' + title + '" /></span>' +
+        '<span>' + title + '</span></li>';
 }
-// Finish building the legend HTML string
-var legendContent = document.getElementById('legend-content');
+
+async function updateLegend() {
+    let legendHTMLString = '<ul>';
+
+    const layersArray = overlayLayers.getLayers().getArray().slice().reverse();
+    for (let overlayLayer of layersArray) {
+        if (!overlayLayer.getVisible()) continue;
+
+        const layerTitle = overlayLayer.get('title');
+
+        if (overlayLayer.getSource() instanceof ImageWMS) {
+            const legendUrlJson = overlayLayer.getSource().getLegendUrl(0, { format: "application/json" });
+            const legendUrlImage = overlayLayer.getSource().getLegendUrl(0, { format: "image/png" });
+
+            try {
+                const response = await fetch(legendUrlJson);
+                const data = await response.json();
+                const symbolizer = data["Legend"][0]["rules"][0]["symbolizers"][0];
+                let layerColor = null;
+
+                if ("Polygon" in symbolizer) {
+                    layerColor = symbolizer["Polygon"]["fill"];
+                } else if ("Line" in symbolizer) {
+                    layerColor = symbolizer["Line"]["stroke"];
+                }
+
+                if (layerColor) {
+                    legendHTMLString += getLegendElement(layerTitle, layerColor);
+                } else {
+                    legendHTMLString += getLegendImageElement(layerTitle, legendUrlImage);
+                }
+            } catch (err) {
+                legendHTMLString += getLegendImageElement(layerTitle, legendUrlImage);
+            }
+        } else {
+            const style = overlayLayer.getStyle?.();
+            const fill = style?.getFill?.();
+            if (fill) {
+                const color = fill.getColor();
+                legendHTMLString += getLegendElement(layerTitle, color);
+            }
+        }
+
+        break; // only show the legend for the first visible layer
+    }
+
+    legendHTMLString += '</ul>';
+    document.getElementById('legend-content').innerHTML = legendHTMLString;
+}
+
+// Watch for visibility changes to update the legend
+overlayLayers.getLayers().forEach(layer => {
+    layer.on('change:visible', () => updateLegend());
+});
+
+
 legendHTMLString += "</ul>";
-legendContent.innerHTML = legendHTMLString;
+document.getElementById('legend-content').innerHTML = legendHTMLString;
+
 
 // Add the layer groups to the map here, at the end of the script!
 map.addLayer(basemapLayers);
 map.addLayer(overlayLayers);
+
+updateLegend();
