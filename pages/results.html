@@ -1,136 +1,258 @@
 <!DOCTYPE HTML>
 <!--
-	Arcana by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Arcana by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-	    <title>GIS Project</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../assets/css/main.css" />
-	</head>
-	<body class="is-preload">
-		<div id="page-wrapper">
+    <head>
+        <title>GIS Project</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../assets/css/main.css" />
+    </head>
+    <body class="is-preload">
+        <div id="page-wrapper">
 
-			<!-- Header -->
-				<div id="header">
+            <!-- Header -->
+            <div id="header">
+                <!-- Logo -->
+                <h1><a href="index.html" id="logo">Air Polution Analysis <em>Poland</em></a></h1>
+                <!-- Nav -->
+                <nav id="nav">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="current"><a href="results.html">Results</a></li>
+                        <li><a href="webgis.html">WebGIS</a></li>								
+                    </ul>
+                </nav>
+            </div>
 
-					<!-- Logo -->
-						<h1><a href="index.html" id="logo">Air Polution Analysis <em>Poland</em></a></h1>
+<!-- ...existing code... -->
+            <!-- Main -->
+            <section class="wrapper style1">
+                <div class="container">
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="../index.html">Home</a></li>
-								<li class="current"><a href="results.html">Results</a></li>
-								<li><a href="webgis.html">WebGIS</a></li>								
-							</ul>
-						</nav>
+                    <!-- Methodology and Results Titles Row -->
+                    <div class="row gtr-200" style="margin-bottom: 2em;">
+                        <div class="col-4 col-12-narrower">
+                            <section>
+                                <h3>Methodology</h3>
+                                <p class="justified-text">For our analysis, we performed the following steps.</p>
+                            </section>
+                        </div>
+                        <div class="col-8 col-12-narrower imp-narrower">
+							<h2>Results</h2>
+							<p>Below you can see the results of each step.</p>
+                        </div>
+                    </div>
 
-				</div>
+                    <!-- Step 1 -->
+                    <div class="row gtr-200" style="margin-bottom: 2em;">
+                        <div class="col-4 col-12-narrower">
+                            <section>
+                                <h4>Step 1 – Monthly Pollutant Maps for Poland (Dec 2022)</h4>
+                                <p class="justified-text">
+                                    In Step 1, the objective was to generate raster maps for the three pollutants —NO₂, PM₂.₅ and PM₁₀— for December 2022 over Poland.
+                                    This involved downloading CAMS data for that period, clipping it to Poland’s boundaries, and exporting the following raster layers:<br>
+                                    Poland_CAMS_no2_2022_12.tif<br>
+                                    Poland_CAMS_pm2p5_2022_12.tif<br>
+                                    Poland_CAMS_pm10_2022_12.tif
+                                </p>
+                            </section>
+                        </div>
+                        <div class="col-8 col-12-narrower imp-narrower">
+                            <div style="display: flex; justify-content: center; gap: 2em;">
+                                <img src="../images/step1_no2.png" alt="Step 1 NO2" style="max-width: 35%; height: auto; border-radius: 8px;">
+                                <img src="../images/step1_pm2p5.png" alt="Step 1 PM2.5" style="max-width: 35%; height: auto; border-radius: 8px;">
+                            </div>
+                            <div style="display: flex; justify-content: center;">
+                                <img src="../images/step1_pm10.png" alt="Step 1 PM10" style="max-width: 35%; height: auto; border-radius: 8px;">
+                            </div>
+                        </div>
+                    </div>
 
-			<!-- Main -->
-				<section class="wrapper style1">
-					<div class="container">
-						<div class="row gtr-200">
-							<div class="col-4 col-12-narrower">
-								<div id="sidebar">
+                    <!-- Step 2 -->
+                    <div class="row gtr-200" style="margin-bottom: 2em;">
+                        <div class="col-4 col-12-narrower">
+                            <section>
+                                <h4>Step 2 – Yearly Average Pollutant Maps for 2022</h4>
+                                <p class="justified-text">
+                                    In Step 2, the goal was to compute the annual average concentration maps for the same three pollutants over Poland for the year 2022.
+                                    This included the temporal aggregation of monthly CAMS data and produced the following layers:<br>
+                                    Poland_average_no2_2022.tif<br>
+                                    Poland_average_pm2p5_2022.tif<br>
+                                    Poland_average_pm10_2022.tif
+                                </p>
+                            </section>
+                        </div>
+                        <div class="col-8 col-12-narrower imp-narrower">
+                            <div style="display: flex; justify-content: center; gap: 2em;">
+                                <img src="../images/step2_no2.png" alt="Step 2 NO2" style="max-width: 35%; height: auto; border-radius: 8px;">
+                                <img src="../images/step2_pm2p5.png" alt="Step 2 PM2.5" style="max-width: 35%; height: auto; border-radius: 8px;">
+                            </div>
+                            <div style="display: flex; justify-content: center;">
+                                <img src="../images/step2_pm10.png" alt="Step 2 PM10" style="max-width: 35%; height: auto; border-radius: 8px;">
+                            </div>
+                        </div>
+                    </div>
 
-									<!-- Sidebar -->
+                    <!-- Step 3 -->
+                    <div class="row gtr-200" style="margin-bottom: 2em;">
+                        <div class="col-4 col-12-narrower">
+                            <section>
+                                <h4>Step 3 – Pollutant Concentration Maps for 2020</h4>
+                                <p class="justified-text">
+                                    In Step 3, we processed CAMS data from 2020 to generate the raw pollutant concentration maps for NO₂, PM₂.₅ and PM₁₀, clipped to the Polish territory.
+                                    The following produced layers can be seen on the right:<br>
+                                    Poland_no2_concentration_map_2020.tif<br>
+                                    Poland_pm2p5_concentration_map_2020.tif<br>
+                                    Poland_pm10_concentration_map_2020.tif
+                                </p>
+                            </section>
+                        </div>
+                        <div class="col-8 col-12-narrower imp-narrower">
+                            <div style="display: flex; justify-content: center; gap: 2em;">
+                                <img src="../images/step3_no2.png" alt="Step 3 NO2" style="max-width: 35%; height: auto; border-radius: 8px;">
+                                <img src="../images/step3_pm2p5.png" alt="Step 3 PM2.5" style="max-width: 35%; height: auto; border-radius: 8px;">
+                            </div>
+                            <div style="display: flex; justify-content: center;">
+                                <img src="../images/step3_pm10.png" alt="Step 3 PM10" style="max-width: 35%; height: auto; border-radius: 8px;">
+                            </div>
+                        </div>
+                    </div>
 
-										<section>
-											<h3>Methodology</h3>
-											<p>We can describe each step of the method in the left section</p>
-											<footer>
-												<a href="#" class="button">Continue Reading</a>
-											</footer>
-										</section>
+                    <!-- Step 4 -->
+                    <div class="row gtr-200" style="margin-bottom: 2em;">
+                        <div class="col-4 col-12-narrower">
+                            <section>
+                                <h4>Step 4 – Annual Average Difference from 2017–2021 Mean</h4>
+                                <p class="justified-text">
+                                    In Step 4, we calculated the difference between the 2022 annual average pollutant values and the mean of 2017–2021 for each pollutant, creating anomaly maps and associated SLD styles. The following produced styled layers can be seen on the right:<br>
+                                    Poland_no2_2017-2021_AAD_map_2022.tif and .sld<br>
+                                    Poland_pm2p5_2017-2021_AAD_map_2022.tif and .sld<br>
+                                    Poland_pm10_2017-2021_AAD_map_2022.tif and .sld
+                                </p>
+                            </section>
+                        </div>
+                        <div class="col-8 col-12-narrower imp-narrower">
+                            <div style="display: flex; justify-content: center; gap: 2em;">
+                                <img src="../images/step4_no2.png" alt="Step 4 NO2" style="max-width: 45%; height: auto; border-radius: 8px;">
+                                <img src="../images/step4_pm2p5.png" alt="Step 4 PM2.5" style="max-width: 45%; height: auto; border-radius: 8px;">
+                            </div>
+                            <div style="display: flex; justify-content: center;">
+                                <img src="../images/step4_pm10.png" alt="Step 4 PM10" style="max-width: 45%; height: auto; border-radius: 8px;">
+                            </div>
+                        </div>
+                    </div>
 
-										<section>
-											<h3>Another Subheading</h3>
-											<ul class="links">
-												<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-												<li><a href="#">Ornare in hendrerit in lectus</a></li>
-												<li><a href="#">Semper mod quis eget mi dolore</a></li>
-												<li><a href="#">Consequat etiam lorem phasellus</a></li>
-												<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-												<li><a href="#">Semper mod quisturpis nisi</a></li>
-											</ul>
-											<footer>
-												<a href="#" class="button">More Random Links</a>
-											</footer>
-										</section>
+                    <!-- Step 5 -->
+                    <div class="row gtr-200" style="margin-bottom: 2em;">
+                        <div class="col-4 col-12-narrower">
+                            <section>
+                                <h4>Step 5 – Reclassified Land Cover Map for 2022</h4>
+                                <p class="justified-text">
+                                    In Step 5, the ESA CCI Land Cover map for 2022 was downloaded and clipped to Poland. Using the IPCC schema, land cover classes were reclassified into broader categories (e.g., agriculture, urban, forest), and the output was the following layer seen on the right:<br>
+                                    Poland_LC_reclassified_2022.tif
+                                </p>
+                            </section>
+                        </div>
+                        <div class="col-8 col-12-narrower imp-narrower">
+                            <div style="display: flex; justify-content: center;">
+                                <img src="../images/step5.png" alt="Step 5" style="max-width: 55%; height: auto; border-radius: 8px;">
+                            </div>
+                        </div>
+                    </div>
 
-								</div>
-							</div>
-							<div class="col-8  col-12-narrower imp-narrower">
-								<div id="content">
+                    <!-- Step 6 -->
+                    <div class="row gtr-200" style="margin-bottom: 2em;">
+                        <div class="col-4 col-12-narrower">
+                            <section>
+                                <h4>Step 6 – Resampling and Zonal Statistics Over Urban Areas</h4>
+                                <p class="justified-text">
+                                    In Step 6, the CAMS average pollutant rasters are resampled to match the 300m resolution of the ESA land cover map. Then, urban land cover areas are polygonized and zonal statistics (mean, max) are computed over these polygons for each pollutant, which can be seen in the form of bar charts on the right.
+                                </p>
+                            </section>
+                        </div>
+                        <div class="col-8 col-12-narrower imp-narrower">
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 2em;">
+                                <img src="../images/step6_no2.png" alt="Step 6 NO2" style="max-width: 55%; height: auto; border-radius: 8px;">
+                                <img src="../images/step6_pm2p5.png" alt="Step 6 PM2.5" style="max-width: 55%; height: auto; border-radius: 8px;">
+                                <img src="../images/step6_pm10.png" alt="Step 6 PM10" style="max-width: 55%; height: auto; border-radius: 8px;">
+                            </div>
+                        </div>
+                    </div>
 
-									<!-- Content -->
+                    <!-- Step 7 -->
+                    <div class="row gtr-200" style="margin-bottom: 2em;">
+                        <div class="col-4 col-12-narrower">
+                            <section>
+                                <h4>Step 7 – Bivariate Analysis of Pollution and Population</h4>
+                                <p class="justified-text">
+                                    In Step 7, population count data (WorldPop 2020) for Poland is reclassified into 5 quantile-based classes. A bivariate index combining population density and pollutant concentration is created per administrative zone using GAUL Level 2 boundaries. The bivariate maps for each pollutant can be seen in the right with the corresponding legend below:
+                                </p>
+                                <img src="../images/legend_bivariate_5x5.png" style="max-width: 70%; height: auto; border-radius: 8px;">
+                            </section>
+                        </div>
+                        <div class="col-8 col-12-narrower imp-narrower">
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 2em;">
+                                <img src="../images/step7_no2.png" alt="Step 7 NO2" style="max-width: 55%; height: auto; border-radius: 8px;">
+                                <img src="../images/step7_pm2p5.png" alt="Step 7 PM2.5" style="max-width: 5%; height: auto; border-radius: 8px;">
+                                <img src="../images/step7_pm10.png" alt="Step 7 PM10" style="max-width: 55%; height: auto; border-radius: 8px;">
+                            </div>
+                        </div>
+                    </div>
 
-										<article>
-											<header>
-												<h2>Results</h2>
-												<p>And have the corresponding results of each step to the right</p>
-											</header>
+                    <!-- Step 8 -->
+                    <div class="row gtr-200" style="margin-bottom: 2em;">
+                        <div class="col-4 col-12-narrower">
+                            <section>
+                                <h4>Step 8 – Final Population Exposure Visualization</h4>
+                                <p class="justified-text">
+                                    In Step 8, the pollutant bivariate layers are dissolved by pollutant class and used to create pie charts showing population exposure per pollutant category. This visual summary helps communicate how many people are exposed to each air quality level. The pie charts can be seen on the right.
+                                </p>
+                            </section>
+                        </div>
+                        <div class="col-8 col-12-narrower imp-narrower">
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 2em;">
+                                <img src="../images/step8_no2.png" alt="Step 8 NO2" style="max-width: 55%; height: auto; border-radius: 8px;">
+                                <img src="../images/step8_pm2p5.png" alt="Step 8 PM2.5" style="max-width: 55%; height: auto; border-radius: 8px;">
+                                <img src="../images/step8_pm10.png" alt="Step 8 PM10" style="max-width: 55%; height: auto; border-radius: 8px;">
+                            </div>
+                        </div>
+                    </div>
 
-											<span class="image featured"><img src="images/banner.jpg" alt="" /></span>
+                </div>
 
-											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-											consequat etiam lorem ipsum dolor sit amet nullam.</p>
+				<div style="width: 100%; text-align: center; margin: 3em 0 2em 0;">
+                    <p style="font-size: 1.15em; max-width: 700px; margin: 0 auto 1.5em auto;">
+                        For an interactive visualization, we have also included a WebGIS page in our analysis. We used an online Geoserver instance of Politecnico di Milano to share our geospatial data and Openlayers library for creating the interactive map page.
+                    </p>
+                    <a href="webgis.html" class="button" style="font-size: 1.1em;">See the Map</a>
+                </div>
+			</section>
 
-											<h3>And Yet Another Subheading</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac quam risus, at tempus
-											justo. Sed dictum rutrum massa eu volutpat. Quisque vitae hendrerit sem. Pellentesque lorem felis,
-											ultricies a bibendum id, bibendum sit amet nisl. Mauris et lorem quam. Maecenas rutrum imperdiet
-											vulputate. Nulla quis nibh ipsum, sed egestas justo. Morbi ut ante mattis orci convallis tempor.
-											Etiam a lacus a lacus pharetra porttitor quis accumsan odio. Sed vel euismod nisi. Etiam convallis
-											rhoncus dui quis euismod. Maecenas lorem tellus, congue et condimentum ac, ullamcorper non sapien.
-											Donec sagittis massa et leo semper a scelerisque metus faucibus. Morbi congue mattis mi.
-											Phasellus sed nisl vitae risus tristique volutpat. Cras rutrum commodo luctus.</p>
+            <!-- Footer -->
+            <div id="footer">
+                <!-- Icons -->
+                <img id="footer-logo" src="../images/polimi_logo.jpg" alt="" />
+                <!-- Copyright -->
+                <div class="copyright">
+                    <ul class="menu">
+                        <li>&copy; GIS Project 2025 group 22</li>
+                    </ul>
+                </div>
+            </div>
 
-											<p>Phasellus odio risus, faucibus et viverra vitae, eleifend ac purus. Praesent mattis, enim
-											quis hendrerit porttitor, sapien tortor viverra magna, sit amet rhoncus nisl lacus nec arcu.
-											Suspendisse laoreet metus ut metus imperdiet interdum aliquam justo tincidunt. Mauris dolor urna,
-											fringilla vel malesuada ac, dignissim eu mi. Praesent mollis massa ac nulla pretium pretium.
-											Maecenas tortor mauris, consectetur pellentesque dapibus eget, tincidunt vitae arcu.
-											Vestibulum purus augue, tincidunt sit amet iaculis id, porta eu purus.</p>
-										</article>
+        </div>
 
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+        <!-- Scripts -->
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/jquery.dropotron.min.js"></script>
+        <script src="../assets/js/browser.min.js"></script>
+        <script src="../assets/js/breakpoints.min.js"></script>
+        <script src="../assets/js/util.js"></script>
+        <script src="../assets/js/main.js"></script>
 
-			<!-- Footer -->
-				<div id="footer">
-
-					<!-- Icons -->
-					<img id="footer-logo" src="../images/polimi_logo.jpg" alt="" />
-
-					<!-- Copyright -->
-						<div class="copyright">
-							<ul class="menu">
-								<li>&copy; GIS Project 2025 group 22</li>
-							</ul>
-						</div>
-
-				</div>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    </body>
 </html>
