@@ -30,7 +30,7 @@ The following files are important:
 Most of the rest of the files are part of the HTML template and may be only lightly modified.
 
 ## Building and publishing the project
-Project is build by executing the command:
+Project is built by executing the command:
 ```
 npm run build
 ```
