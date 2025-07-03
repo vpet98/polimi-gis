@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <base href="">
+    <title>GIS Project</title>
+
+    <meta charset="utf-8">
+
+    <!--StyleSheets-->
+    <!-- <link rel="stylesheet" href="../assets/libraries/ol-v6.14.1-dist/ol.css"> -->
+
+    <!-- Static files are imported from public folder -->
+
+    <!-- Modules are imported normally -->
+  <script type="module" crossorigin src="/polimi-gis/assets/webgis-CXWhjViU.js"></script>
+  <link rel="stylesheet" crossorigin href="/polimi-gis/assets/webgis-DrmtwvvJ.css">
+</head>
+
+<body>
+    <div class="w-100 vh-100">
+        <div class="floating-button">
+            <a href="../index.html" class="btn btn-success">Go Home</a>
+        </div>
+        <div id="map"></div>
+
+        <!--Add here the popup HTML-->
+        <div id="popup" class="ol-popup">
+            <a href="#" id="popup-closer" class="ol-popup-closer">
+                &times;
+            </a>
+            <div id="popup-content"></div>
+        </div>
+
+        <!--Add here the legend HTML-->
+        <div id="legend" class="legend-container">
+            <span class="legend-title">Map Legend</span>
+            <div id="legend-content" class="legend-content">
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
