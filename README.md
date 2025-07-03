@@ -30,4 +30,8 @@ The following files are important:
 Most of the rest of the files are part of the HTML template and may be only lightly modified.
 
 ## Building and publishing the project
-TODO
+Project is build by executing the command:
+```
+npm run build
+```
+And is hosted in GitHub Pages at [https://vpet98.github.io/polimi-gis/](https://vpet98.github.io/polimi-gis/).
